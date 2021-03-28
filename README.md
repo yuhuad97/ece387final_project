@@ -12,5 +12,7 @@ The equipment:
 3.	Motor
 4.	Infrared sensor module
 ??
+
+
 Enhanced Smart Trash Can:
 It is a good idea to add more functional trash cans. So I will add a new feature here, that is, if it senses that the garbage is full, it will sound an alarm. If possible, I will increase its mobility.
