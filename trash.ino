@@ -1,16 +1,16 @@
-#include <Servo.h>//舵机库
+#include <Servo.h>//library for servo motor
 #include <LiquidCrystal_I2C.h>
 #include <Wire.h>
 #include <dht.h>
 
-Servo servo_11;//声明舵机变量
-volatile float chao1;//超声波1变量
-volatile float chao2;//超声波2变量
-LiquidCrystal_I2C mylcd(0x27,16,2);//1602地址
+Servo servo_11;//Declare servo variables
+volatile float chao1;//Ultrasonic 1 variable
+volatile float chao2;//Ultrasonic 2 variable
+LiquidCrystal_I2C mylcd(0x27,16,2);//lcd 1602 address
 dht myDHT_A3;//DHT11
-volatile int guang;//光线变量
-volatile int shidu;//湿度变量
-volatile int wendu;//温度变量
+volatile int guang;//Light variable
+volatile int shidu;//Humidity variable
+volatile int wendu;//Temperature variable
 
 int dht_A3_gethumidity() //湿度函数
 {
@@ -19,14 +19,14 @@ int dht_A3_gethumidity() //湿度函数
   return value;
 }
 
-int dht_A3_gettemperature() //温度函数
+int dht_A3_gettemperature() //Temperature function
 {
   int chk = myDHT_A3.read11(A3);
   int value = myDHT_A3.temperature;
   return value;
 }
 
-float checkdistance_4_3()//第一个超声波
+float checkdistance_4_3()//First ultrasound
 {
   digitalWrite(4, LOW);
   delayMicroseconds(2);
@@ -38,7 +38,7 @@ float checkdistance_4_3()//第一个超声波
   return distance;
 }
 
-float checkdistance_6_7() //第二个超声波
+float checkdistance_6_7() //Second ultrasound
 {
   digitalWrite(6, LOW);
   delayMicroseconds(2);
@@ -50,7 +50,7 @@ float checkdistance_6_7() //第二个超声波
   return distance;
 }
 
-void setup()//设置函数
+void setup()//Set function
 {
   chao1 = 0;
   chao2 = 0;
@@ -61,11 +61,11 @@ void setup()//设置函数
   pinMode(3, INPUT);
   pinMode(6, OUTPUT);
   pinMode(7, INPUT);
-  pinMode(8, OUTPUT);//蜂鸣器
-  digitalWrite(8, LOW);//蜂鸣器高电平触发所以默认设置为低电平
-  pinMode(9, OUTPUT);//灯
+  pinMode(8, OUTPUT);//buzzer
+  digitalWrite(8, LOW);//The buzzer is triggered at high level, so the default setting is low level
+  pinMode(9, OUTPUT);//light led
   digitalWrite(9, LOW);//
-  servo_11.attach(11);//舵机的引脚
+  servo_11.attach(11);//Servo pin
 }
 
 void loop()
@@ -75,15 +75,15 @@ void loop()
   shidu = dht_A3_gethumidity();
   chao1 = checkdistance_4_3();//3E4T
   chao2 = checkdistance_6_7();//6e7t
-  Serial.println(chao1);//分别用串口打印超声波1和2的距离
+  Serial.println(chao1);//Use the serial port to print the distance of ultrasonic 1 and 2 respectively
   Serial.println(chao2);
   mylcd.clear();
   mylcd.setCursor(1-1, 1-1);
-  mylcd.print(String("GUANG ") + String(guang));//光线显示
+  mylcd.print(String("GUANG ") + String(guang));//Light display
   mylcd.setCursor(1-1, 0-1);
-  mylcd.print(String("TEMP ") + String(wendu));//温度显示
+  mylcd.print(String("TEMP ") + String(wendu));//temperature display
   mylcd.setCursor(10-1, 0-1);
-  mylcd.print(String("RH ") + String(shidu));//湿度显示
+  mylcd.print(String("RH ") + String(shidu));//Humidity display
   delay(100);
 if(guang>500)
 {
@@ -99,7 +99,7 @@ else
 
 void jiance()
 {
-    if (chao1 <= 15) //人靠近垃圾桶距离小于15了垃圾桶盖子打开
+    if (chao1 <= 15) //The distance between the person close to the trash can is less than 15 and the lid of the trash can is opened
   {
     do
     {
@@ -113,7 +113,7 @@ while(chao1 >= 15);
   {
     servo_11.write(90);
     delay(100);
-    if (chao2 <= 4)//如果超声波2检测到桶内垃圾满了报警 
+    if (chao2 <= 4)//If Ultrasonic 2 detects that the bin is full of garbage, it will alarm
     {
     digitalWrite(8, HIGH);
     }
