@@ -9,14 +9,15 @@ By making related projects, you can improve your programming level. And can bett
 
 Here is the Materials and equipment you need for the project:
 1. A small size trash can
-2. Arduino Uno
-3. HC-SR04 Ultrasonic Distance Sensor（*2)
-4. LDR Sensor Module Interface
-5. DHT11 Temperature And Relative Humidity Sensor Module
-6. LED 5mm （*5）
-7. Male/Female Jumper Wires 
-8. LCD1602A BLUEE SCREEN 
-9. Servo Motor SG-90
-10. Buzzer Active 5V Module （*2）
-11. A Hot Glue Gun
-12. Some paper boxes as auxiliary materials
+      <img scr="img_project/arudino.jpeg">
+3. Arduino Uno
+4. HC-SR04 Ultrasonic Distance Sensor（*2)
+5. LDR Sensor Module Interface
+6. DHT11 Temperature And Relative Humidity Sensor Module
+7. LED 5mm （*5）
+8. Male/Female Jumper Wires 
+9. LCD1602A BLUEE SCREEN 
+10. Servo Motor SG-90
+11. Buzzer Active 5V Module （*2）
+12. A Hot Glue Gun
+13. Some paper boxes as auxiliary materials
