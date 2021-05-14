@@ -56,5 +56,6 @@ At the same time, we need to use a hot melt gun to glue all the modules together
 
 ![cir_digram](https://user-images.githubusercontent.com/78301174/118263157-7b5c7000-b4e8-11eb-8bfd-f8c9e70183b5.png)
 
-## Project video
+## Project related videos and codes
 Video：https://www.youtube.com/embed/cQ0-9XSofic
+This site was built using [CODE](https://github.com/yuhuad97/ece387final_project/blob/main/trash.ino).
