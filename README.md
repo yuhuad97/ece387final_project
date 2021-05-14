@@ -43,20 +43,18 @@ Finished!
 Since the optional trash can does not have a lid, we need to use the paper box to cut out a suitable size for the lid of the trash can. It should be noted that since our design is an automatic switch cover, its power drive is a servo motor. Therefore, it is very important to appropriately reduce the weight of the lid itself.
 At the same time, we need to use a hot melt gun to glue all the modules together so that all the equipment becomes a whole.
 
+![p1](https://user-images.githubusercontent.com/78301174/118263231-95964e00-b4e8-11eb-9539-e8495890b934.jpg)
+![p3](https://user-images.githubusercontent.com/78301174/118263335-b2328600-b4e8-11eb-90cc-b2e3a94c2cd1.jpg)
 
-1. A small size trash can
- <img src="img_project/p2.jpg"width="500" height="500">
-
-
-<img src="img_project/p3.jpg"width="500" height="500">
-
-<img src="img_project/p4.jpg"width="500" height="500">
 
 
 
 
 ## Circuit diagram
 1.Here is the circuit diagram:
-<img src="img_project/cir_digram.png"width="500" height="500">
+
+
+![cir_digram](https://user-images.githubusercontent.com/78301174/118263157-7b5c7000-b4e8-11eb-8bfd-f8c9e70183b5.png)
+
 ## Project video
 Video：https://www.youtube.com/embed/cQ0-9XSofic
